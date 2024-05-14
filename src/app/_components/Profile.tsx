@@ -20,9 +20,9 @@ const Profile: React.FC = () => {
                     <div className='flex space-x-6'>
                         <div className='flex space-x-12'>
                             {
-                                routes.map(route => {
+                                routes.map((route,idx) => {
                                     return (
-                                        <button className='font-semibold focus:text-green-700'>{route}</button>
+                                        <button key={idx} className='font-semibold focus:text-green-700'>{route}</button>
                                     )
                                 })
                             }
@@ -64,9 +64,9 @@ const Profile: React.FC = () => {
                         </div>
                         <div className='w-full flex flex-col items-start px-4 py-6 space-y-2 border-b-2'>
                             {
-                                profile_buttons[1]?.map(edit => {
+                                profile_buttons[1]?.map((edit,idx) => {
                                     return (
-                                        <button className='text-[14px] text-slate-500 focus:font-semibold'>{edit}</button>
+                                        <button key={idx} className='text-[14px] text-slate-500 focus:font-semibold'>{edit}</button>
                                     )
                                 })
                             }
